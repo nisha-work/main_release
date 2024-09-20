@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore the World with Us</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Welcome to Our Travel Agency</h2>
+        <p>Your adventure starts here. Discover the world’s most beautiful places with us!</p>
+    </section>
+    <!-- Search & Filter Section -->
+<section id="search-filter">
+    <h2>Find Your Perfect Trip</h2>
+    <form id="searchForm">
+        <input type="text" id="destination" placeholder="Enter Destination">
+        <input type="date" id="startDate">
+        <input type="date" id="endDate">
+        <input type="number" id="budget" placeholder="Enter Budget">
+        <button type="submit">Search</button>
+    </form>
+    <div id="filter-options">
+        <label for="price">Price</label>
+        <input type="range" id="price" min="0" max="5000">
+        <label for="duration">Duration</label>
+        <input type="range" id="duration" min="1" max="30">c
+        <label for="rating">Rating</label>
+        <select id="rating">
+            <option value="any">Any</option>
+            <option value="4">4 stars & up</option>
+            <option value="3">3 stars & up</option>
+        </select>
+    </div>
+</section>
+<!-- Booking Form -->
+<section id="booking">
+    <h2>Book Your Trip</h2>
+    <form id="bookingForm">
+        <label for="trip-dates">Travel Dates</label>
+        <input type="date" id="trip-start">
+        <input type="date" id="trip-end">
+        <label for="traveler-name">Traveler Name</label>
+        <input type="text" id="traveler-name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+<section id="destinations">
+    <h2>Top Destinations</h2>
+    <img src="paris.jpg" width="300" height="350">
+    <div class="destination-card">
+        <h3>Paris</h3>
+        <p>Experience the city of lights!</p>
+    </div>
+    <img src="bali.jpg" width="300" height="350">
+    <div class="destination-card">
+        <h3>Bali</h3>
+        <p>Discover the beauty of Bali.</p>
+    </div>
+    <img src="new york.jpg" width="300" height="350">
+    <div class="destination-card">
+        <h3>New York</h3>
+        <p>Visit the Big Apple.</p>
+    </div>
+</section>
+<!-- Travel Package Listings Section -->
+<section id="packages">
+    <h2>Travel Packages</h2>
+    <div class="package"><h1> Must-see attractions </h1>
+        <h2>PARIS</h2>
+        <img src="eiffel tower.jpg" width="300" height="350">
+        <p>There are different ways to experience the Eiffel Tower, from a daytime trip<br>
+        or an evening ascent amid twinkling lights, to a meal in one of its…</p>
+        <h3>Eiffel Tower</h3>
+        <img src="paris.jpg" width="300" height="350">
+        <p>No matter if you come for 3 days or 20,this city deserves a visit at all times of the year<br>
+            in spring and summer to enjoy the “joie de vivre” outdoors;and in the colder seasons to take advantage of its <br>
+            great cultural offer and soak up the bohemian atmosphere in a cafe by the Seine...</p>
+
+            <h3>Center Pompidou</h3>
+            <img src="center pompidou.jpg" width="300" height="350">
+            <p>Home to Europe's largest collection of modern and contemporary art,<br>
+            Centre Pompidou has amazed and delighted visitors ever since it...</p>
+
+            <h3>Sainte-Chapelle </h3>
+            <img src="sainte chapelle.jpg" width="300" height="350">
+            <p>Visit Sainte-Chapelle on a sunny day when Paris’ oldest,<br>
+            finest stained glass (1242–48) is at its dazzling best. The chapel is famous for its...</p>
+            <div>
+            <p>Price: $1200 | Rating: 4.5</p>
+        <p>5 Days of exploring the Eiffel Tower,Cent, aner Pompidou,Sainte-chapelle,and more.</p>
+        <button onclick="viewPackage('paris-adventure')">View Details</button>
+    </div>
+
+            <h2>BALI</h2>
+            <h3>Bali: Batur Volcano Sunrise Jeep Tour.</h3>
+        <img src="bali1.jpg" width="300" height="400">
+        <p>Delve deep into Bali's stunning natural beauty on this 4WD sunrise Jeep.<br>
+        unforgettable sunrise views from Batur volcano and<BR>
+        visit black lava as the biggest lava formation on earth</p>
+
+        <h3>Bali: Mount Batur Sunrise Trek.</h3>
+        <img src="bali2.jpg" width="300" height="350">
+        <p>Hike your way up, then stand a top the ancient Mount Batur volcano<br>
+            and watch the sun come up over the sea.</p> 
+
+            <h3>Bali: Kecak Fire Dance Show & Uluwatu Temple.</h3>
+        <img src="bali3.jpg" width="300" height="350">
+        <p>Experience a traditional Kecak fire dance against the high cliffs of southern Bali<br>
+            and visit the sacred Uluwatu Temple.</p> 
+                <p>Price: $1500 | Rating: 5.0</p>
+                <p>You can’t buy happiness but you can buy a ticket to Bali.</p>
+                <button onclick="viewPackage('bali-adventure')">View Details</button>
+            </div>
+            
+            <h2>NEW YORK</h2>
+            <h3>New York City: Manhattan Helicopter Tour.</h3>
+        <img src="new york1.jpg" width="300" height="350">
+        <p>Enjoy a bird's eye perspective of NYC on a narrated helicopter tour<br>
+        as you cruise over Manhattan's iconic skyscrapers, come face to face with the Statue of Liberty,<br>
+        and head uptown past Central Park</p>
+
+        <h3>NYC: SUMMIT One Vanderbilt Experience.</h3>
+        <img src="new york2.jpg" width="300" height="350">
+        <p>Witness the views over New York City with a ticket to SUMMIT One Vanderbilt. Ascend 93 floors
+        and step into an immersive, multi-sensory art experience with sweeping 360-degree views of the city.</p> 
+
+            <h3>NYC: Brooklyn Bridge and Dumbo Guided Walking Tour.</h3>
+        <img src="new york3.jpg" width="300" height="400">
+        <p>Make your way from Manhattan to Brooklyn on a guided walking tour in New York City.<br>
+            Wander across the iconic Brooklyn Bridge and learn about its history,<br>
+            and explore the trendy Dumbo neighborhood.</p> 
+                <p>Price: $2000 | Rating: 5.0</p>
+                <p>New York, the city filled with the power of creativity.</p>
+                <button onclick="viewPackage('new york-adventure')">View Details</button>
+            </div>
+
+     <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@travelagency.com</p>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
